@@ -2,7 +2,6 @@
 type: Guide
 title: SMKB Template
 description: Workshop starter for a personal course knowledge base maintained with an AI agent.
-tags: [okf, workshop, template]
 status: draft
 generated: { by: Codex/gpt-6, at: 2026-11-02T02:55:52Z }
 ---
