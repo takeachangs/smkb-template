@@ -20,15 +20,18 @@ smkb-template/
 ├── AGENTS.md                         # routes setup, ingestion, and skill requests
 ├── CLAUDE.md                         # points Claude to AGENTS.md
 ├── SETUP.md                          # first-time setup conversation
-├── OKF.md                            # format rules and a worked example
-├── check.py                          # basic frontmatter and link check
+├── kb.py                             # index, lint, and viewer commands
+├── .kb/                              # OKF v0.2 spec and local tooling
+├── index.md                          # generated map of the bundle
+├── schedule.md                       # timetable and dated items
+├── log.md                            # history of changes
 ├── .gitignore                         # local files and secrets to exclude from Git
 ├── .agents/skills/ingest/SKILL.md    # project-level ingestion workflow
 ├── .claude/skills/ingest/SKILL.md    # Claude entry for that workflow
 └── examples/DEMO101/references/      # fictional course files for practice
 ```
 
-Setup creates your course folders, `schedule.md`, and `log.md` with you. The repository starts without your personal course files.
+Setup creates your course folders and fills in `schedule.md` and `log.md` with you. The repository starts without your personal course files.
 
 ## The two workflows
 
@@ -59,4 +62,4 @@ Bring your own course files. Git is optional. The local setup works before you c
 
 If you did not bring course files, say **“Set up using the DEMO101 sample course.”** The files in `examples/DEMO101/` are fictional. Setup uses them only when you choose that practice path.
 
-After setup or ingestion, ask your agent to run `python3 check.py` if Python is available. The checker catches missing `type` frontmatter and broken local Markdown links; [OKF.md](OKF.md) explains the format.
+With `uv` installed, run `./kb.py index && ./kb.py lint` after changes. `index` regenerates the directory maps; `lint` checks OKF frontmatter and local Markdown links. The format specification is in [.kb/SPEC.md](.kb/SPEC.md). The optional `./kb.py viz` writes a local `viz.html` graph.
