@@ -37,13 +37,15 @@ Open this folder in an AI agent that can read and write local files. Say:
 
 The agent follows `SETUP.md`. It asks about your courses, existing materials, and timetable one step at a time. It shows you where it plans to put files before copying them into the knowledge base.
 
-### Ingest new material
+### Ingest material or today's work
 
-When you get new slides, a syllabus, an assignment, or lecture notes, point the agent to the file and say:
+Ask in your own words when you want to add something to the knowledge base. You can name a file or refer to work you just did with the agent:
 
-> Ingest this file into my course: [file path].
+> Ingest `lecture-04.pdf`.
 
-The project-level ingest skill preserves the original, updates the relevant course pages, and reports anything you need to check.
+> Ingest today's work.
+
+The agent uses the current conversation to identify the course and material. If either is unclear, it asks before writing. It preserves original files, updates the relevant course pages, and reports anything you need to check.
 
 ## How to start
 

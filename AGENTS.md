@@ -11,7 +11,7 @@ generated: { by: Codex/gpt-6, at: 2026-11-02T02:55:52Z }
 
 When the user asks to set up this repository for the first time, read `SETUP.md` and follow its onboarding workflow.
 
-When the user asks to ingest course material, use `.agents/skills/ingest/SKILL.md`.
+When the user asks to ingest a course file or today's work, use `.agents/skills/ingest/SKILL.md`.
 
 When the user asks to create or update a skill, put it in this repository under `.agents/skills/<name>/SKILL.md` and add a project-level Claude entry under `.claude/skills/<name>/SKILL.md`. Do not put project skills in a user-level directory.
 
