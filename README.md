@@ -20,9 +20,12 @@ smkb-template/
 ├── AGENTS.md                         # routes setup, ingestion, and skill requests
 ├── CLAUDE.md                         # points Claude to AGENTS.md
 ├── SETUP.md                          # first-time setup conversation
+├── OKF.md                            # format rules and a worked example
+├── check.py                          # basic frontmatter and link check
 ├── .gitignore                         # local files and secrets to exclude from Git
 ├── .agents/skills/ingest/SKILL.md    # project-level ingestion workflow
-└── .claude/skills/ingest/SKILL.md    # Claude entry for that workflow
+├── .claude/skills/ingest/SKILL.md    # Claude entry for that workflow
+└── examples/DEMO101/references/      # fictional course files for practice
 ```
 
 Setup creates your course folders, `schedule.md`, and `log.md` with you. The repository starts without your personal course files.
@@ -53,3 +56,7 @@ The agent uses the current conversation to identify the course and material. If 
 - **Without Git:** use **Code → Download ZIP**, unzip it, and open the folder in your AI agent.
 
 Bring your own course files. Git is optional. The local setup works before you connect Canvas or other services.
+
+If you did not bring course files, say **“Set up using the DEMO101 sample course.”** The files in `examples/DEMO101/` are fictional. Setup uses them only when you choose that practice path.
+
+After setup or ingestion, ask your agent to run `python3 check.py` if Python is available. The checker catches missing `type` frontmatter and broken local Markdown links; [OKF.md](OKF.md) explains the format.

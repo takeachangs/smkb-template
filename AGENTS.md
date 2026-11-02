@@ -11,8 +11,10 @@ generated: { by: Codex/gpt-6, at: 2026-11-02T02:55:52Z }
 
 When the user asks to set up this repository for the first time, read `SETUP.md` and follow its onboarding workflow.
 
+The files under `examples/` are fictional. Do not put DEMO101 in a student's real course list or schedule unless the user chooses the sample exercise.
+
 When the user asks to ingest a course file or today's work, use `.agents/skills/ingest/SKILL.md`.
 
 When the user asks to create or update a skill, put it in this repository under `.agents/skills/<name>/SKILL.md` and add a project-level Claude entry under `.claude/skills/<name>/SKILL.md`. Do not put project skills in a user-level directory.
 
-For knowledge documents, use OKF v0.2: Markdown with YAML frontmatter and a `type`. Include a title, one-sentence description, `generated` actor and time, sources for source-derived facts, and standard Markdown links. New agent-written pages start with `status: draft`; only the student adds human verification. Preserve original course files, flag conflicting facts, and follow each course's AI policy.
+For knowledge documents, follow `OKF.md` and OKF v0.2: Markdown with YAML frontmatter and a `type`. Include a title, one-sentence description, `generated` actor and time, sources for source-derived facts, and standard Markdown links. New agent-written pages start with `status: draft`; only the student adds human verification. Preserve original course files, flag conflicting facts, and follow each course's AI policy. Run `python3 check.py` when Python is available.
